@@ -5,13 +5,14 @@ from PIL import Image, ImageDraw, ImageFont
 import time
 from datetime import date
 
-font = PIL.ImageFont.truetype("/usr/share/fonts/truetype/liberation2/LiberationMono-Regular.ttf",24)
+font = PIL.ImageFont.truetype("/usr/share/fonts/truetype/liberation2/LiberationMono-Regular.ttf",48)
 pc2 = Picamera2()
 pc2.start_preview( True )
 while True:
   today = date.today()
   t=time.localtime()
-  current_time=time.strftime(":%H:%M:%S",t)
+  current_time1=time.strftime(":%H:%M:%S",t)
+  current_time=time.strftime("_H%H_M%M_S%S",t)
   fn="photo_"+str(today)+current_time+".jpg"
   pc2.start()
   pc2.set_controls( {"AfMode" : controls.AfModeEnum.Continuous} )
@@ -19,6 +20,6 @@ while True:
   pc2.capture_file("tempp.jpg")
   img=Image.open("tempp.jpg")
   draw=ImageDraw.Draw(img)
-  draw.text((20, 440), str(today)+current_time, 'red', font=font)
+  draw.text((20, 440), str(today)+current_time1, 'yellow', font=font)
   img.save(fn)
-  time.sleep(5)
+  time.sleep(295)
