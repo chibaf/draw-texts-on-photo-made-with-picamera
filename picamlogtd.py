@@ -7,7 +7,6 @@ from datetime import date
 
 font = PIL.ImageFont.truetype("/usr/share/fonts/truetype/liberation2/LiberationMono-Regular.ttf",48)
 pc2 = Picamera2()
-pc2.resolution = (1280,960)
 #pc2.framerate = 15
 pc2.start_preview(True)
 while True:
@@ -19,6 +18,7 @@ while True:
   pc2.start()
   pc2.set_controls( {"AfMode" : controls.AfModeEnum.Continuous} )
   time.sleep(5)
+  pc2.resolution = (1280,960)
   pc2.capture_file("tempp.jpg")
   img=Image.open("tempp.jpg")
   img_resize = img.resize((1280,960))
