@@ -7,7 +7,10 @@ from datetime import date
 
 font = PIL.ImageFont.truetype("/usr/share/fonts/truetype/liberation2/LiberationMono-Regular.ttf",48)
 pc2 = Picamera2()
+#pc2.resolution = (1280,960)
 #pc2.framerate = 15
+config = pc2.create_still_configuration(lores={"size": (640,480)}, display="lores")
+pc2.configure(config)
 pc2.start_preview(True)
 while True:
   today = date.today()
@@ -18,12 +21,12 @@ while True:
   pc2.start()
   pc2.set_controls( {"AfMode" : controls.AfModeEnum.Continuous} )
   time.sleep(5)
-  pc2.resolution = (1280,960)
   pc2.capture_file("tempp.jpg")
   img=Image.open("tempp.jpg")
   img_resize = img.resize((1280,960))
   draw=ImageDraw.Draw(img_resize)
   draw.text((20, 880), str(today)+current_time1, 'yellow', font=font)
   img_resize.save(fn)
+#  img.save(fn)
 #  pc2.stop_preview( True )
   time.sleep(5)
