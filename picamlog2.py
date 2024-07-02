@@ -7,7 +7,7 @@ from datetime import date
 
 font = PIL.ImageFont.truetype("/usr/share/fonts/truetype/liberation2/LiberationMono-Regular.ttf",48)
 pc2 = Picamera2()
-pc2.preview_configuration.size = (1280,960)
+pc2.preview_configuration.size = (2560,1920)
 pc2.start(show_preview=True)
 while True:
   today = date.today()
