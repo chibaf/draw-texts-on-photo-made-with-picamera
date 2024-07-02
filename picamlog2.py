@@ -23,4 +23,4 @@ while True:
   draw=ImageDraw.Draw(img)
   draw.text((20, 880), str(today)+current_time1, 'yellow', font=font)
   img.save(fn)
-  time.sleep(5)
+  time.sleep(295)
