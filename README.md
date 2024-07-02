@@ -25,7 +25,7 @@ while True:
 	  img.save(fn)
 	  time.sleep(295)
   except KeyboardInterrupt:
-    os.remove("./"+sys.argv[1]+"/temp_.jpg")
+      os.remove("./"+sys.argv[1]+"/temp_.jpg")
 </pre>
 
 ## usage:
