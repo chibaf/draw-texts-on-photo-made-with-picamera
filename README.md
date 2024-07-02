@@ -24,6 +24,10 @@ while True:
   time.sleep(295)
 </pre>
 
+<pre>
+  python3 picamlog2.py sub_directory
+</pre>
+
 ## references
 
 Python, Pillowで文字（テキスト）を描画、フォント設定 | note.nkmk.me
