@@ -24,6 +24,7 @@ while True:
   time.sleep(295)
 </pre>
 
+## usage:
 <pre>
   python3 picamlog2.py sub_directory
 </pre>
