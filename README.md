@@ -1,7 +1,7 @@
 # draw-texts-on-photo-made-with-picamera
 draw texts on photo made with picamera
 
-## code:  picamlogt.py
+## code:  picamlog2.py
 
 <pre>
 font = PIL.ImageFont.truetype("/usr/share/fonts/truetype/liberation2/LiberationMono-Regular.ttf",48)
