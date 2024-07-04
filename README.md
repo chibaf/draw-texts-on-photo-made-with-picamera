@@ -1,10 +1,14 @@
 # draw-texts-on-photo-made-with-picamera
 draw texts on photo made with picamera
 
+image size = 1280 x 960 
+
 ## usage:
 <pre>
   python3 picamlog2.py sub_directory
 </pre>
+
+file name example: photo_2024-07-05_H03_M08_S49.jpg
 
 ## references
 
