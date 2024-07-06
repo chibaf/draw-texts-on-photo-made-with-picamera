@@ -9,7 +9,7 @@ import sys
 
 font = PIL.ImageFont.truetype("/usr/share/fonts/truetype/liberation2/LiberationMono-Regular.ttf",192)
 pc2 = Picamera2()
-pc2.preview_configuration.size = (1280,960)
+pc2.preview_configuration.size=(2304,1296)
 pc2.start(show_preview=True)
 while True:
   today = date.today()
